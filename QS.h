@@ -18,7 +18,10 @@ private:
 	void quicksort(int first, int last);
 public:
 	QS() {}
-	virtual ~QS() {}
+	virtual ~QS() {
+		delete [] table;
+		table = 0;
+	}
 
 	/*
 	* sortAll()
